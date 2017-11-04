@@ -1,0 +1,35 @@
+{
+  "name": "cat-session",
+  "version": "0.0.1",
+  "description": "Session manager, actions and reducers for Redux/Immutable",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "babel --stage 0 lib/ --out-dir dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parakhod/cat-session.git"
+  },
+  "keywords": [
+    "redux",
+    "store",
+    "reducer",
+    "async"
+  ],
+  "author": "Andrey Korinskiy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/parakhod/cat-session/issues"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "homepage": "https://github.com/parakhod/cat-session#readme",
+  "dependencies": {
+    "cat-stores": "0.0.1",
+    "immutable": "^3.8.2",
+    "redux-feline-actions": "0.0.2"
+  }
+}
