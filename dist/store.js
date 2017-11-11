@@ -39,7 +39,7 @@ exports.default = function (dataFields) {
 
     return {
       begin: function begin(state, action) {
-        return state.set('loggingIn', true).delete('error').set('requestingNow', 'login');
+        return state.set('loggingIn', true).delete('error');
       },
       complete: function complete(state, _ref2) {
         var payload = _ref2.payload;
