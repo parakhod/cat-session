@@ -1,6 +1,6 @@
 {
   "name": "cat-session",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Session manager, actions and reducers for Redux/Immutable",
   "main": "dist/index.js",
   "scripts": {

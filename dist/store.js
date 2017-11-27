@@ -21,12 +21,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 exports.default = function (dataFields) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+
+  var token = null;
+
+  try {
+    token = localStorage.token;
+  } catch (e) {}
 
   var initialState = _immutable2.default.fromJS(_extends({
     initializing: true,
     loggedIn: false,
     loggingIn: false,
-    token: null,
+    token: token,
     uploadProgress: 0,
     isUploadingProfileImage: false,
     isJustRegistered: false
@@ -43,6 +51,13 @@ exports.default = function (dataFields) {
       },
       complete: function complete(state, _ref2) {
         var payload = _ref2.payload;
+
+
+        if (Array.isArray(options.roles)) {
+          if (options.roles.indexOf(payload.role) === -1) {
+            return state.set('error', 'loginErrorInsufficientRights').set('loggingIn', false);
+          }
+        }
 
         var f = Object.keys(_extends({
           token: null
