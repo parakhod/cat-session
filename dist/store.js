@@ -33,7 +33,7 @@ exports.default = function (dataFields) {
   var initialState = _immutable2.default.fromJS(_extends({
     initializing: true,
     loggedIn: false,
-    loggingIn: false,
+    loggingIn: token != null,
     token: token,
     uploadProgress: 0,
     isUploadingProfileImage: false,
