@@ -29,7 +29,7 @@
   "homepage": "https://github.com/parakhod/cat-session#readme",
   "dependencies": {
     "cat-stores": "0.0.1",
-    "immutable": "^3.8.2",
+    "immutable": "^4.0.0-rc.12",
     "redux-feline-actions": "0.0.2"
   }
 }
